@@ -2,18 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "*.html",
+      "src": "ai_helpers_final_2.html",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/cases",
-      "dest": "/cases.html"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/ai_helpers_final_2.html"
     }
   ]
 }
