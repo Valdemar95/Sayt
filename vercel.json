@@ -6,6 +6,14 @@
       "use": "@vercel/static"
     },
     {
+      "src": "robots.txt",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "sitemap.xml",
+      "use": "@vercel/static"
+    },
+    {
       "src": "api/webhook.js",
       "use": "@vercel/node"
     }
@@ -16,10 +24,18 @@
       "dest": "/api/webhook.js"
     },
     {
+      "src": "/robots.txt",
+      "dest": "/robots.txt"
+    },
+    {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml"
+    },
+    {
       "src": "/(.*)",
       "dest": "/ai_helpers_final_2.html"
     }
-  ]
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -27,8 +43,5 @@
         { "key": "X-Robots-Tag", "value": "index, follow" }
       ]
     }
-  ],
-  "rewrites": [
-    { "source": "/", "destination": "/ai_helpers_final_2__12_.html" }
   ]
 }
