@@ -20,4 +20,15 @@
       "dest": "/ai_helpers_final_2.html"
     }
   ]
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "index, follow" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/", "destination": "/ai_helpers_final_2__12_.html" }
+  ]
 }
