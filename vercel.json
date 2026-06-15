@@ -1,0 +1,71 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "ai_helpers_final_2.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "automation.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "whatsapp-bot.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "case-studies.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "robots.txt",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "sitemap.xml",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "api/webhook.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/webhook",
+      "dest": "/api/webhook.js"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt"
+    },
+    {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml"
+    },
+    {
+      "src": "/automation",
+      "dest": "/automation.html"
+    },
+    {
+      "src": "/whatsapp-bot",
+      "dest": "/whatsapp-bot.html"
+    },
+    {
+      "src": "/case-studies",
+      "dest": "/case-studies.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/ai_helpers_final_2.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "index, follow" }
+      ]
+    }
+  ]
+}
