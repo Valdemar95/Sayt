@@ -3,7 +3,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
   
-  const response = await fetch('https://vova4332232.app.n8n.cloud/webhook/045681ba-5645-4585-8cb7-503cf2802c3b', {
+  const response = await fetch('https://aihelpers88888.app.n8n.cloud/webhook/045681ba-5645-4585-8cb7-503cf2802c3b', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(req.body)
